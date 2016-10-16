@@ -22,12 +22,12 @@
   <artifactId>parshyaghiwari</artifactId>
 
     <!-- Parent POM defines common plugins and properties. -->
-    <parent>
+    <!-- <parent>
       <groupId>com.google.cloud</groupId>
       <artifactId>shared-configuration</artifactId>
       <version>1.0.0</version>
       <relativePath>java-repo-tools</relativePath>
-   </parent>
+   </parent> -->
 
     <properties>
       <appengine.app.version>1</appengine.app.version>
@@ -90,6 +90,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
                     <archiveClasses>true</archiveClasses>
                     <webResources>
                         <!-- in order to interpolate version from pom into appengine-web.xml -->
